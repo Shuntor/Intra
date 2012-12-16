@@ -1,0 +1,241 @@
+/*
+Syntaxe CSS :
+	sélecteur {propriété1 : valeur1 ;propriété2 : valeur2 ;…}
+
+Couleurs : aqua, black, blue, fuchsia, gray, green, lime,
+			maroon, navy, olive, purple, red, silver, teal, white...
+
+Qq propriétés du texte :
+- text-align: left| right| center| justify
+- text-decoration: none | underline| overline| line-through
+- text-transform: none | capitalize| uppercase| lowercase
+- text-indent: length| 10%
+- white-space: normal | pre| nowrap
+- color: rgb(255,0,0)
+- direction : ltr| rtl
+
+Qq propriétés de police :
+- font-family: courier,serif
+- font-size: xx-small| x-small| small| medium | …
+- font-weight: normal | bold | bolder| …
+- font-style: normal | italic| oblique
+
+Combinaison de plusieurs propriétés :
+font : courier small italic
+
+Qq propriétés du fond
+- background-color: rgb(255,0,0)
+- background-image: url("titi.gif")
+- background-repeat: repeat| no-repeat| repeat-x| repeat-y
+- background-attachment: scroll | fixed
+
+Combiner plusieurs propriétés de background en une:
+ - background : url("titi.gif") fixed no-repeat
+ 
+ De l'extérieur vers le contenu : Marge (margin), Bordure (border) et Espacement (padding)
+ 
+ Marge
+- margin-top: auto | taille
+- margin-right: auto | taille
+- margin-bottom: auto | taille
+- margin-left: auto | taille
+raccourci : margin : 1px 2px 3px 2px
+
+si 2 marges opposés sont "auto", 
+elles divisent l'espace disponible en 2
+utile pour centrer les éléments de type bloc dans leur container
+ex: 
+div> table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+Espacement
+- padding-top: taille
+- padding-right: taille
+- padding-bottom: taille
+- padding-left: taille
+raccourci : padding : 1px 2px 3px 2px
+
+Bordures
+- border-width: thin| medium | thick| size
+- border-style: none | hidden| dotted| dashed| solid| double| 
+						groove| ridge| inset| outset
+- border-color: grey | ...
+Raccourci : border : solid 1px blue
+
+On peut changer la position des boîtes avec top, bottom, left, right(: size)
+
+Import d'une feuille de style au début d'une autre
+<style type="text/css">
+		@import url("loudvoice.css");
+</style>
+
+Lorsque plusieurs définitions CSS se combinent, on peut utiliser !important 
+pour imposer une priorité de style
+ex: body {
+		color: black !important;
+		background: white !important;
+}
+
+différence entre un span et un id ? 
+		- id et class sont des arguments pour parametrer l'affichage de balises
+		- span prend id ou class comme arg et permet de modifier l'apparence d'un bout de                    texte  sans avoir besoin d'une autre balise...
+		- ex 1 : <h4 id="important"> ceci est un texte important </h4>
+		- ex 2 : Ma couleur préférée est le <span id="gros"> rouge </span>
+*/
+
+html, body {
+/* on définit une hauteur et une largeur de 100% pour tous les blocs parents du document (body ET html) 
+de manière à ce que celui occupe tout le navigateur */
+	height: 100%;
+	width: 100%;
+/* pas de marge externe ni interne autour du contenu dans ces blocs */
+	margin: 0;
+	padding: 0;
+	font-family: "Trebuchet MS" ;
+	overflow: hidden;
+}
+
+div {
+/* pour tous les div, le texte est centré */
+	text-align:center;
+}
+
+ul{
+	font-style: italic;
+	text-align: left;
+}
+
+table {
+border:3px solid rgb(152,167,169);
+border-collapse:collapse;
+width:100%;
+
+}
+thead, tfoot {
+background-color:#D0E3FA;
+background-image:url(sky.jpg);
+border:1px solid #6495ed;
+}
+tbody {
+background-color:#FFFFFF;
+border:1px solid #6495ed;
+}
+th {
+font-family:"Trebuchet MS" ;
+border:1px dotted #6495ed;
+padding:5px;
+background-color:#EFF6FF;
+width:25%;
+}
+td {
+font-family:"Trebuchet MS" ;
+font-size:80%;
+border:1px solid #6495ed;
+padding:5px;
+text-align:left;
+}
+caption {
+font-family:"Trebuchet MS" ;
+}
+
+#bandeau {
+height: 90px;
+/*width:700px;
+margin:auto;
+padding:5px;*/
+background-image:url(imagescss/titre.png);
+background-position: center;
+background-repeat: no-repeat;
+/*
+background-color:rgb(152,167,169);
+border-left:1px solid #000000; 
+border-right:1px solid #000000;
+border-bottom:1px solid #000000;
+border-top:1px solid #000000;*/
+} 
+
+#menu {
+/* si on met dans un fichier HTML des divs les uns à la suite des autres, ils s'affichent les uns sous les autres.
+Pour afficher deux div l'un à coté de l'autre, il faut utiliser la propriété float que l'on met à left pour le div menu
+et pour le div contenu. Ce bloc Menu sert de "conteneur" pour les div menu_haut et menu_bas */
+	float:left;
+	width:15%;
+	height:85%;
+	background-color:rgb(50,126,163);
+}
+
+#menu8 {
+	width: 200px;
+	margin-top: 10px;
+	float:left;
+}
+	
+#menu8 li a {
+	text-decoration: none;
+	height: 32px;
+  	voice-family: "\"}\""; 
+  	voice-family: inherit;
+  	height: 24px;
+}
+	
+#menu8 li a:link, #menu8 li a:visited {
+	color: #777;
+	display: block;
+	background: url(imagescss/menu8.gif);
+	padding: 8px 0 0 20px;
+}
+	
+#menu8 li a:hover {
+	color: #257EB7;
+	background: url(imagescss/menu8.gif) 0 -32px;
+	padding: 8px 0 0 25px;
+}
+	
+#menu8 li a:active {
+	color: #fff;
+	background: url(imagescss/menu8.gif) 0 -64px;
+	padding: 8px 0 0 25px;
+}
+
+#menu8 ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#contenu {
+	/*	
+	la balise overflow permet de définir le comportement de la div 
+	quand le contenu est rop grand. Avec la valeur scroll, ce débordement
+	est géré par des barres de défilement. Ci-dessous on précise qu'on veut
+	seulement une barre de défilement verticale (overflow -y:scroll).  
+	Si on veut aussi une barre de défilement horizontale, on fait: overflow:scroll;
+*/
+	float:left;
+	overflow-y:scroll;
+	width:85%;
+	height:85%;
+	background-color:#FFFFFF;
+}
+
+#pied_page {
+/* le pied de page se glisse sous le menu et le contenu à cause de la propriété float précédemment utilisée.
+Pour éviter cela on utilise une propriété qui va permettre que notre élément se remette à se 
+comporter normalement (qu'il se positionne en dessous du reste). C'est la propriété clear:both */
+	padding:5px 2px;/*Marge verticale*/
+    background-color:rgb(FFFFFF); /*Couleur de fond*/
+    text-align:center;/*texte centré*/
+    height: 5%;
+    float: bottom;
+}
+	
+tr:hover{
+	background-color:#ffff99;
+}
+
+a:link {
+	text-decoration:underline;
+	color:blue;
+}
