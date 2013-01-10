@@ -26,7 +26,7 @@
 		<li><a href="index.php?p=accueil" title="Home">Accueil</a></li>	
 		<li><a href="index.php?p=consultprix" title="prix">Biens par prix</a></li>
 		<li><a href="index.php?p=consultcat" title="cat">Biens par categorie</a></li>	
-		<li><a href="index.php?p=detailbien" title="cat">Biens </a></li>	
+		<li><a href="index.php?p=recherche" title="cat">Recherche d'un bien</a></li>	
 	</ul>
 	
 
@@ -48,6 +48,10 @@
 				{include("consultcat.php");}
 			else if($_GET['p']=='detailbien')
 				{include("detailbien.php");}
+			else if($_GET['p']=='recherche')
+				{include("recherche.php");}
+			else if($_GET['p']=='saisieunevisite')
+				{include("saisieunevisite.php");}
 			?>
 	</p>	
 		

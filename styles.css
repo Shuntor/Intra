@@ -1,11 +1,11 @@
 /*
 Syntaxe CSS :
-	sélecteur {propriété1 : valeur1 ;propriété2 : valeur2 ;…}
+	sï¿½lecteur {propriï¿½tï¿½1 : valeur1 ;propriï¿½tï¿½2 : valeur2 ;ï¿½}
 
 Couleurs : aqua, black, blue, fuchsia, gray, green, lime,
 			maroon, navy, olive, purple, red, silver, teal, white...
 
-Qq propriétés du texte :
+Qq propriï¿½tï¿½s du texte :
 - text-align: left| right| center| justify
 - text-decoration: none | underline| overline| line-through
 - text-transform: none | capitalize| uppercase| lowercase
@@ -14,25 +14,25 @@ Qq propriétés du texte :
 - color: rgb(255,0,0)
 - direction : ltr| rtl
 
-Qq propriétés de police :
+Qq propriï¿½tï¿½s de police :
 - font-family: courier,serif
-- font-size: xx-small| x-small| small| medium | …
-- font-weight: normal | bold | bolder| …
+- font-size: xx-small| x-small| small| medium | ï¿½
+- font-weight: normal | bold | bolder| ï¿½
 - font-style: normal | italic| oblique
 
-Combinaison de plusieurs propriétés :
+Combinaison de plusieurs propriï¿½tï¿½s :
 font : courier small italic
 
-Qq propriétés du fond
+Qq propriï¿½tï¿½s du fond
 - background-color: rgb(255,0,0)
 - background-image: url("titi.gif")
 - background-repeat: repeat| no-repeat| repeat-x| repeat-y
 - background-attachment: scroll | fixed
 
-Combiner plusieurs propriétés de background en une:
+Combiner plusieurs propriï¿½tï¿½s de background en une:
  - background : url("titi.gif") fixed no-repeat
  
- De l'extérieur vers le contenu : Marge (margin), Bordure (border) et Espacement (padding)
+ De l'extï¿½rieur vers le contenu : Marge (margin), Bordure (border) et Espacement (padding)
  
  Marge
 - margin-top: auto | taille
@@ -41,9 +41,9 @@ Combiner plusieurs propriétés de background en une:
 - margin-left: auto | taille
 raccourci : margin : 1px 2px 3px 2px
 
-si 2 marges opposés sont "auto", 
+si 2 marges opposï¿½s sont "auto", 
 elles divisent l'espace disponible en 2
-utile pour centrer les éléments de type bloc dans leur container
+utile pour centrer les ï¿½lï¿½ments de type bloc dans leur container
 ex: 
 div> table {
 	margin-left: auto;
@@ -64,30 +64,30 @@ Bordures
 - border-color: grey | ...
 Raccourci : border : solid 1px blue
 
-On peut changer la position des boîtes avec top, bottom, left, right(: size)
+On peut changer la position des boï¿½tes avec top, bottom, left, right(: size)
 
-Import d'une feuille de style au début d'une autre
+Import d'une feuille de style au dï¿½but d'une autre
 <style type="text/css">
 		@import url("loudvoice.css");
 </style>
 
-Lorsque plusieurs définitions CSS se combinent, on peut utiliser !important 
-pour imposer une priorité de style
+Lorsque plusieurs dï¿½finitions CSS se combinent, on peut utiliser !important 
+pour imposer une prioritï¿½ de style
 ex: body {
 		color: black !important;
 		background: white !important;
 }
 
-différence entre un span et un id ? 
+diffï¿½rence entre un span et un id ? 
 		- id et class sont des arguments pour parametrer l'affichage de balises
-		- span prend id ou class comme arg et permet de modifier l'apparence d'un bout de                    texte  sans avoir besoin d'une autre balise...
+		- span prend id ou class comme arg et permet de modifier l'apparence d'un bout de texte  sans avoir besoin d'une autre balise...
 		- ex 1 : <h4 id="important"> ceci est un texte important </h4>
-		- ex 2 : Ma couleur préférée est le <span id="gros"> rouge </span>
+		- ex 2 : Ma couleur prï¿½fï¿½rï¿½e est le <span id="gros"> rouge </span>
 */
 
 html, body {
-/* on définit une hauteur et une largeur de 100% pour tous les blocs parents du document (body ET html) 
-de manière à ce que celui occupe tout le navigateur */
+/* on dï¿½finit une hauteur et une largeur de 100% pour tous les blocs parents du document (body ET html) 
+de maniï¿½re ï¿½ ce que celui occupe tout le navigateur */
 	height: 100%;
 	width: 100%;
 /* pas de marge externe ni interne autour du contenu dans ces blocs */
@@ -98,7 +98,7 @@ de manière à ce que celui occupe tout le navigateur */
 }
 
 div {
-/* pour tous les div, le texte est centré */
+/* pour tous les div, le texte est centrï¿½ */
 	text-align:center;
 }
 
@@ -157,19 +157,21 @@ border-top:1px solid #000000;*/
 } 
 
 #menu {
-/* si on met dans un fichier HTML des divs les uns à la suite des autres, ils s'affichent les uns sous les autres.
-Pour afficher deux div l'un à coté de l'autre, il faut utiliser la propriété float que l'on met à left pour le div menu
+/* si on met dans un fichier HTML des divs les uns ï¿½ la suite des autres, ils s'affichent les uns sous les autres.
+Pour afficher deux div l'un ï¿½ cotï¿½ de l'autre, il faut utiliser la propriï¿½tï¿½ float que l'on met ï¿½ left pour le div menu
 et pour le div contenu. Ce bloc Menu sert de "conteneur" pour les div menu_haut et menu_bas */
 	float:left;
 	width:15%;
 	height:85%;
 	background-color:rgb(50,126,163);
+	
 }
 
 #menu8 {
 	width: 200px;
 	margin-top: 10px;
 	float:left;
+	
 }
 	
 #menu8 li a {
@@ -207,28 +209,33 @@ et pour le div contenu. Ce bloc Menu sert de "conteneur" pour les div menu_haut 
 
 #contenu {
 	/*	
-	la balise overflow permet de définir le comportement de la div 
-	quand le contenu est rop grand. Avec la valeur scroll, ce débordement
-	est géré par des barres de défilement. Ci-dessous on précise qu'on veut
-	seulement une barre de défilement verticale (overflow -y:scroll).  
-	Si on veut aussi une barre de défilement horizontale, on fait: overflow:scroll;
+	la balise overflow permet de dï¿½finir le comportement de la div 
+	quand le contenu est rop grand. Avec la valeur scroll, ce dï¿½bordement
+	est gï¿½rï¿½ par des barres de dï¿½filement. Ci-dessous on prï¿½cise qu'on veut
+	seulement une barre de dï¿½filement verticale (overflow -y:scroll).  
+	Si on veut aussi une barre de dï¿½filement horizontale, on fait: overflow:scroll;
 */
-	float:left;
+
+	float:right;
 	overflow-y:scroll;
 	width:85%;
-	height:85%;
+	height:80%%;
 	background-color:#FFFFFF;
+	left: 0;
+	
+	
 }
 
 #pied_page {
-/* le pied de page se glisse sous le menu et le contenu à cause de la propriété float précédemment utilisée.
-Pour éviter cela on utilise une propriété qui va permettre que notre élément se remette à se 
-comporter normalement (qu'il se positionne en dessous du reste). C'est la propriété clear:both */
+/* le pied de page se glisse sous le menu et le contenu ï¿½ cause de la propriï¿½tï¿½ float prï¿½cï¿½demment utilisï¿½e.
+Pour ï¿½viter cela on utilise une propriï¿½tï¿½ qui va permettre que notre ï¿½lï¿½ment se remette ï¿½ se 
+comporter normalement (qu'il se positionne en dessous du reste). C'est la propriï¿½tï¿½ clear:both */
 	padding:5px 2px;/*Marge verticale*/
     background-color:rgb(FFFFFF); /*Couleur de fond*/
-    text-align:center;/*texte centré*/
+    text-align:center;/*texte centrï¿½*/
     height: 5%;
-    float: bottom;
+    position: absolute;
+    bottom: 0;
 }
 	
 tr:hover{
