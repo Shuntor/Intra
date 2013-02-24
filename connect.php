@@ -1,5 +1,4 @@
 <?php
-
 	$conn = mysql_connect("localhost", "root", "")
 	or die ("Connexion impossible");
 	$base="agence";

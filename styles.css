@@ -216,9 +216,9 @@ et pour le div contenu. Ce bloc Menu sert de "conteneur" pour les div menu_haut 
 	Si on veut aussi une barre de d�filement horizontale, on fait: overflow:scroll;
 */
 
-	float:right;
+	float:right; 
 	overflow-y:scroll;
-	width:85%;
+	width:83%;
 	height:80%%;
 	background-color:#FFFFFF;
 	left: 0;
